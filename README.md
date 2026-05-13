@@ -1,38 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Full-Stack Portfolio & Resume
 
-## Getting Started
+This project is my personal professional portfolio, designed to showcase my skills as a Full-Stack Software Developer. The UI features a modern dark mode with custom **Aqua-Petrol** accents.
 
-First, run the development server:
+## 🛠 Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+*   **Framework:** Next.js 13.4.8 (Pages Router)
+*   **Styling:** Styled Components with Global Theming & SSR
+*   **Language:** TypeScript & JavaScript
+*   **Internationalization:** Prepared for DE / EN / DK
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📋 Features
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+*   **Multi-language Support:** Ready for German, English, and Danish localization.
+*   **Responsive Design:** Fully optimized for mobile, tablet, and desktop views.
+*   **Custom Branding:** Unique "Petrol-Glow" design system based on personalized color palettes.
+*   **Project Showcase:** Integrated sections for highlighting key development work.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 🌟 Highlight Projects
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+*   **Zoo 2 Community Manager:** A comprehensive web application for game management featuring animal lexicons, contest tracking, and member administration.
+*   **Trail-Guide:** A regional hiking path management tool built with Express and SQLite.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## ⚙️ Installation & Setup
 
-## Learn More
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/MelanieB-007/portfolio-website.git
+    ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+*   `src/pages/`: Routing and page structure using the Pages Router.
+*   `src/components/`: Reusable UI components.
+*   `src/styles/`: Theme definitions and global styled-components.
+*   `public/`: Static assets including the custom favicon.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+*Developed as part of my Full-Stack Software Development journey at neueFische.*
