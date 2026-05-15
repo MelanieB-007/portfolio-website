@@ -41,7 +41,15 @@ export default function About() {
                             <Company>{item.company}</Company>
                             <Description>{item.description}</Description>
                             <TagCloud>
-                                {item.tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
+                                {item.tags.frontend && item.tags.frontend.map(tag => (
+                                    <Tag key={tag} $type="frontend">{tag}</Tag>
+                                ))}
+                                {item.tags.backend && item.tags.backend.map(tag => (
+                                    <Tag key={tag} $type="backend">{tag}</Tag>
+                                ))}
+                                {item.tags.tools && item.tags.tools.map(tag => (
+                                    <Tag key={tag} $type="tools">{tag}</Tag>
+                                ))}
                             </TagCloud>
                         </ContentCard>
                     </TimelineItem>
@@ -131,14 +139,6 @@ const TagCloud = styled.div`
   margin-top: 1.5rem;
 `;
 
-const Tag = styled.span`
-  font-size: 0.75rem;
-  color: rgba(245, 245, 245, 0.6);
-  border: 1px solid rgba(245, 245, 245, 0.2);
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-`;
-
 const StatsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -172,4 +172,36 @@ const StatLabel = styled.div`
   color: #a0a0a0;
   text-transform: uppercase;
   letter-spacing: 1px;
+`;
+
+// Mapping der Kategorien zu Farben
+const CATEGORY_COLORS = {
+    frontend: {
+        text: '#00f2ff',
+        bg: 'rgba(0, 242, 255, 0.1)',
+        border: 'rgba(0, 242, 255, 0.3)'
+    },
+    backend: {
+        text: '#b794f4',
+        bg: 'rgba(183, 148, 244, 0.1)',
+        border: 'rgba(183, 148, 244, 0.3)'
+    },
+    tools: {
+        text: '#2cb67d',
+        bg: 'rgba(44, 182, 125, 0.1)',
+        border: 'rgba(44, 182, 125, 0.3)'
+    }
+};
+
+
+const Tag = styled.span<{ $type: 'frontend' | 'backend' | 'tools' }>`
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  
+  /* Hier nutzen wir jetzt das $type Prop für das Mapping */
+  color: ${props => CATEGORY_COLORS[props.$type].text};
+  background: ${props => CATEGORY_COLORS[props.$type].bg};
+  border: 1px solid ${props => CATEGORY_COLORS[props.$type].border};
 `;
